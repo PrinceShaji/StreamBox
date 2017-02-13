@@ -1,0 +1,1 @@
+raspivid -o - -t 0 -hf -vf -w 720 -h 640 -fps 20 | cvlc -vvv stream://dev/stdin$
