@@ -4,6 +4,7 @@ Basic Requirements
 >Python
 >ffmpeg/MP4Box
 >Grive
+>python-picamera
 
 
 
@@ -21,7 +22,9 @@ Installation
    or
    2) http://www.theoutpost.org/12-raspberry-pi/installing-grive-google-drive-sync-on-the-raspberry-pi/
    
-   
+>>python-picamera
+  > sudo apt-get install python-picamera
+  
 Process
  >Run the program pycam.py
  >pycam.py creates a video file in a folder
