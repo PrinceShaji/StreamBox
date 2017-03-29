@@ -1,0 +1,14 @@
+__________________________________
+Streaming on YouTube without Audio
+----------------------------------
+>> ffmpeg -re -rtsp_transport tcp -i rtsp://192.168.aaa.ccc/Streaming/Channels/102
+       -f lavfi -i anullsrc
+       -pix_fmt yuv420p -profile:v baseline -s 426x240 -bufsize 2048k -vb 400k -maxrate 800k
+       -deinterlace -vcodec libx264 -preset medium -g 30 -r 30
+       -acodec libmp3lame -ar 44100 -b:a 128k
+       -f flv rtmp://a.rtmp.youtube.com/live2/<YouTube_key>
+ >> link: http://stackoverflow.com/questions/39660547/how-to-live-stream-youtube-without-audio
+ 
+ ________________________________
+ 
+ --------------------------------
