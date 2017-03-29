@@ -9,12 +9,22 @@ Basic Requirements
 
 Installation
  >>Python
-   sudo apt-get install python
+   1) sudo apt-get install python
  
  >>ffmpeg
    1) https://www.assetbank.co.uk/support/documentation/install/ffmpeg-debian-squeeze/ffmpeg-debian-jessie/
    or
    2) https://www.jeffreythompson.org/blog/2014/11/13/installing-ffmpeg-for-raspberry-pi/
   
+ >>Grive
+   1) http://www.pihomeserver.fr/en/2013/08/15/raspberry-pi-home-server-synchroniser-le-raspberry-pi-avec-votre-google-drive/
    or
+   2) http://www.theoutpost.org/12-raspberry-pi/installing-grive-google-drive-sync-on-the-raspberry-pi/
+   
+   
+Process
+ >Run the program pycam.py
+ >pycam.py creates a video file in a folder
+ >Sync 'that' folder with Google Drive using Grive.
+ >So, everytime a new video file is created, it is automatically synced with Google Drive.
   
