@@ -10,6 +10,14 @@ Streaming on YouTube without Audio
  
  >> link: http://stackoverflow.com/questions/39660547/how-to-live-stream-youtube-without-audio
  
- ________________________________
+ ______________________________________
+ Converting raw h264 file to mkv or mp4
+ --------------------------------------
+ >> ffmpeg -r 30 -i film1.h264 -vcodec copy outputfile.mkv
+ >> ffmpeg -r 30 -i film1.h264 -vcodec copy outputfile.mp4
  
- --------------------------------
+ 
+ __________________________
+ Uploading video to YouTube
+ --------------------------
+ >> https://developers.google.com/youtube/v3/guides/uploading_a_video
