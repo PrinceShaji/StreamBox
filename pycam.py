@@ -1,3 +1,12 @@
+"""
+StreamBox. Core file pycam.py.
+
+Current capability: Flip camera, record raw h264 video, convert raw file to mkv or mp4, remove 
+raw file (temp file), display progress.
+
+features to add: Accept gpio input, add audio, custom/time dependent file names, syncing files 
+to Google Drive (integrating Grive), making pycam.py into a service.
+"""
 import picamera
 from time import sleep
 from subprocess import call
@@ -7,8 +16,6 @@ video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
 
 os.system('clear')
 print('Recording...')
-#os.system('rm playablefile.mp4 clear')
-
 
 camera = picamera.PiCamera()
 camera.hflip = True
@@ -20,7 +27,6 @@ os.system('clear')
 print('Recording...... \nStopping recording')
 
 sleep(1)
-#os.system('DATE=$(date +"%Y-%m-%d_%H%M  ffmpeg -r 30 -i video.h264 -vcodec copy $DATE.mp4')
 call ([video_convert], shell=True)
 os.system('clear')
 print('Recording..............[y] \nStopping recording.....[y] \nConverting File........[y]')
