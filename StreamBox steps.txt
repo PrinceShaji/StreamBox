@@ -24,6 +24,7 @@ Installation
    
 >>python-picamera
   > sudo apt-get install python-picamera
+  > link: https://www.raspberrypi.org/documentation/usage/camera/python/README.md
   
 Process
  >Run the program pycam.py
