@@ -1,0 +1,20 @@
+StreamBox
+
+Basic Requirements
+>Python
+>ffmpeg/MP4Box
+>Grive
+
+
+
+Installation
+ >>Python
+   sudo apt-get install python
+ 
+ >>ffmpeg
+   1) https://www.assetbank.co.uk/support/documentation/install/ffmpeg-debian-squeeze/ffmpeg-debian-jessie/
+   or
+   2) https://www.jeffreythompson.org/blog/2014/11/13/installing-ffmpeg-for-raspberry-pi/
+  
+   or
+  
