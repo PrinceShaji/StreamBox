@@ -21,3 +21,17 @@ Streaming on YouTube without Audio
  Uploading video to YouTube
  --------------------------
  >> https://developers.google.com/youtube/v3/guides/uploading_a_video
+ 
+ 
+ _____________
+ Python Camera
+ -------------
+ >> link: https://www.raspberrypi.org/documentation/usage/camera/python/README.md
+ >>
+ >> installing
+ >> sudo apt-get install python-picamera
+ >>
+ >> Usage
+ >> import picamera
+ >>
+ >>
