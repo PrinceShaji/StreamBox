@@ -39,3 +39,30 @@ Streaming on YouTube without Audio
  >>-------------------------------
  >>
  
+ ______
+ rclone
+ ------
+ >> link: https://rclone.org/install/
+ >>
+ >>Fetch and unpack
+ >> wget https://downloads.rclone.org/rclone-v1.36-linux-arm.zip
+ >> unzip rclone-v1.36-linux-arm.zip
+ >> cd rclone-v1.36-linux-arm
+ >>
+ >> Copy binary file
+ >> sudo cp rclone /usr/bin/
+ >> sudo chown root:root /usr/bin/rclone
+ >> sudo chmod 755 /usr/bin/rclone
+ >>
+ >>Install manpage
+ >> sudo mkdir -p /usr/local/share/man/man1
+ >> sudo cp rclone.1 /usr/local/share/man/man1/
+ >> sudo mandb
+ >>
+ >> Run rclone config to setup
+ >>rclone config
+ >>
+ >> rclone config docs
+ >>https://rclone.org/docs/
+ >>
+ >>
