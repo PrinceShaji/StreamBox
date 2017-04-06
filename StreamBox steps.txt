@@ -3,7 +3,7 @@ StreamBox
 Basic Requirements
 >Python
 >ffmpeg/MP4Box
->Grive
+>rclone
 >python-picamera
 
 
@@ -17,10 +17,10 @@ Installation
    or
    2) https://www.jeffreythompson.org/blog/2014/11/13/installing-ffmpeg-for-raspberry-pi/
   
- >>Grive
-   1) http://www.pihomeserver.fr/en/2013/08/15/raspberry-pi-home-server-synchroniser-le-raspberry-pi-avec-votre-google-drive/
+ >>rclone
+   1) Will update
    or
-   2) http://www.theoutpost.org/12-raspberry-pi/installing-grive-google-drive-sync-on-the-raspberry-pi/
+   2) Will update
    
 >>python-picamera
   > sudo apt-get install python-picamera
