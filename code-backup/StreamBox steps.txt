@@ -1,0 +1,34 @@
+StreamBox
+
+Basic Requirements
+>Python
+>ffmpeg/MP4Box
+>rclone
+>python-picamera
+
+
+
+Installation
+ >>Python
+   1) sudo apt-get install python
+ 
+ >>ffmpeg
+   1) https://www.assetbank.co.uk/support/documentation/install/ffmpeg-debian-squeeze/ffmpeg-debian-jessie/
+   or
+   2) https://www.jeffreythompson.org/blog/2014/11/13/installing-ffmpeg-for-raspberry-pi/
+  
+ >>rclone
+   1) Will update
+   or
+   2) Will update
+   
+>>python-picamera
+  > sudo apt-get install python-picamera
+  > link: https://www.raspberrypi.org/documentation/usage/camera/python/README.md
+  
+Process
+ >Run the program pycam.py
+ >pycam.py creates a video file in a folder
+ >Sync 'that' folder with Google Drive using Grive.
+ >So, everytime a new video file is created, it is automatically synced with Google Drive.
+  
