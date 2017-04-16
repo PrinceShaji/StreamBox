@@ -1,1 +1,70 @@
-note.
+__________________________________
+Streaming on YouTube without Audio
+----------------------------------
+>> ffmpeg -re -rtsp_transport tcp -i rtsp://192.168.aaa.ccc/Streaming/Channels/102 #camera source
+       -f lavfi -i anullsrc  #null audio
+       -pix_fmt yuv420p -profile:v baseline -s 426x240 -bufsize 2048k -vb 400k -maxrate 800k
+       -deinterlace -vcodec libx264 -preset medium -g 30 -r 30
+       -acodec libmp3lame -ar 44100 -b:a 128k
+       -f flv rtmp://a.rtmp.youtube.com/live2/<YouTube_key>
+ 
+ >> link: http://stackoverflow.com/questions/39660547/how-to-live-stream-youtube-without-audio
+ 
+ ______________________________________
+ Converting raw h264 file to mkv or mp4
+ --------------------------------------
+ >> ffmpeg -r 30 -i film1.h264 -vcodec copy outputfile.mkv
+ >> ffmpeg -r 30 -i film1.h264 -vcodec copy outputfile.mp4
+ 
+ 
+ __________________________
+ Uploading video to YouTube
+ --------------------------
+ >> https://developers.google.com/youtube/v3/guides/uploading_a_video
+ 
+ 
+ _____________
+ Python Camera
+ -------------
+ >> link: https://www.raspberrypi.org/documentation/usage/camera/python/README.md
+ >>
+ >> installing
+ >> sudo apt-get install python-picamera
+ >>
+ >> Usage
+ >> import picamera
+ >>
+ >>-------------------------------
+ >> Visit webpage for more details
+ >>-------------------------------
+ >>
+ 
+ ______
+ rclone
+ ------
+ >> link: https://rclone.org/install/
+ >>
+ >>Fetch and unpack<<
+ >> wget https://downloads.rclone.org/rclone-v1.36-linux-arm.zip
+ >> unzip rclone-v1.36-linux-arm.zip
+ >> cd rclone-v1.36-linux-arm
+ >>
+ >>Copy binary file<<
+ >> sudo cp rclone /usr/bin/
+ >> sudo chown root:root /usr/bin/rclone
+ >> sudo chmod 755 /usr/bin/rclone
+ >>
+ >>Install manpage
+ >> sudo mkdir -p /usr/local/share/man/man1
+ >> sudo cp rclone.1 /usr/local/share/man/man1/
+ >> sudo mandb
+ >>
+ >>Run rclone config to setup<<
+ >> rclone config
+ >>
+ >>rclone config docs<<
+ >> https://rclone.org/docs/
+ >>
+ >>configuring google drive<<
+ >> link: https://rclone.org/drive/
+ >>
