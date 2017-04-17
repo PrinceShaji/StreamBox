@@ -1,3 +1,7 @@
+"""
+This script is to record a video, convert it to mp4 and upload it to google drive using rclone, while displaying progress. 
+YouTube API integration will be added later. 
+"""
 import picamera
 #from time import sleep
 from subprocess import call
