@@ -6,7 +6,9 @@ Cirrus cards are really expensive. So the safer way would be buying a cheap USB 
 
 1) Adding an usb mic. https://www.quora.com/How-do-I-set-up-a-microphone-on-Raspberry-pi-And-how-to-get-an-input-from-it
 
+
 2) Second one: https://raspberrypi.stackexchange.com/questions/43320/raspberry-pi-3-audio-input
+
 
 3) A project I found on kickstarter
    > https://www.kickstarter.com/projects/1250664710/audio-injector-sound-card-for-the-raspberry-pi
@@ -23,8 +25,10 @@ Cirrus cards are really expensive. So the safer way would be buying a cheap USB 
 5) >>>raspberry-pi-video-and-audio-recording-and-streaming-guide<<<
    > https://hmbd.wordpress.com/2016/08/01/raspberry-pi-video-and-audio-recording-and-streaming-guide/
 
+
 6) >>>An Instructable project<<< Read only the step where adding a mic is covered (step 4)
    http://www.instructables.com/id/Raspberry-Pi-Based-Wireless-Microphone/
+
 
 7) >>>Homemade MIC for Pi<<< (This one only needs an IC and some soldering skills :)  )
 
@@ -32,3 +36,6 @@ Cirrus cards are really expensive. So the safer way would be buying a cheap USB 
 
    Tutorials : http://www.keywordsking.com/cmFzcGJlcnJ5IHBpIHdpdGggbWlj/
                http://www.hertaville.com/interfacing-an-spi-adc-mcp3008-chip-to-the-raspberry-pi-using-c.html
+               
+               The chip only cost about INR 200, here is the link.
+               http://in.element14.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174
