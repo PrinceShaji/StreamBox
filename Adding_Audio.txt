@@ -1,0 +1,15 @@
+Adding audio is a tricky thing to do. You can do it via the cheap method (USB sound card) or the expensive method (cirrus logic audio card)
+
+Cirrus cards are really expensive. So the safer way would be buying a cheap USB sound card. 
+
+<<<Few Tutorials>>>
+
+Adding an usb mic. https://www.quora.com/How-do-I-set-up-a-microphone-on-Raspberry-pi-And-how-to-get-an-input-from-it
+
+Second one: https://raspberrypi.stackexchange.com/questions/43320/raspberry-pi-3-audio-input
+
+A project I found on kickstarter
+> https://www.kickstarter.com/projects/1250664710/audio-injector-sound-card-for-the-raspberry-pi
+> http://www.audioinjector.net/#!/rpi-hat
+
+
