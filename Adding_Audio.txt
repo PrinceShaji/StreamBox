@@ -39,3 +39,10 @@ Cirrus cards are really expensive. So the safer way would be buying a cheap USB 
                
                The chip only cost about INR 200, here is the link.
                http://in.element14.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174
+               
+8) Finally, upgrading the usb microphone (using a sound card)
+   http://www.instructables.com/id/USB-Microphone/
+   http://www.instructables.com/id/Coco-Mic-The-DIY-Studio-Quailty-USB-Mic-MEMS-techn/
+   
+   
+   
