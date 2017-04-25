@@ -13,3 +13,7 @@ A project I found on kickstarter
 > http://www.audioinjector.net/#!/rpi-hat
 
 
+Another alternative. This uses a cheap USB sound card and a software from GitHub.
+>Link to the software: http://jasperproject.github.io/documentation/
+
+Read the documentation and installation giude. This is by far the cheapest option in my opinion.
