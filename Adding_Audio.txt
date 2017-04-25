@@ -16,4 +16,10 @@ A project I found on kickstarter
 Another alternative. This uses a cheap USB sound card and a software from GitHub.
 >Link to the software: http://jasperproject.github.io/documentation/
 
-Read the documentation and installation giude. This is by far the cheapest option in my opinion.
+Read the documentation and installation giude. This is by far the cheapest option in my opinion. (It's a lil complicated)
+
+
+
+>>>raspberry-pi-video-and-audio-recording-and-streaming-guide<<<
+> https://hmbd.wordpress.com/2016/08/01/raspberry-pi-video-and-audio-recording-and-streaming-guide/
+
