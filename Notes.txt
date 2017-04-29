@@ -68,3 +68,6 @@ Streaming on YouTube without Audio
  >>configuring google drive<<
  >> link: https://rclone.org/drive/
  >>
+
+
+Amazing tools to have: https://www.youtube.com/watch?v=26YdJUWqpeM
