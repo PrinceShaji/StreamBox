@@ -4,6 +4,12 @@ Cirrus cards are really expensive. So the safer way would be buying a cheap USB 
 
 <<<Few Tutorials>>>
 
+***************************************
+software for recording video with audio
+***************************************
+https://github.com/iizukanao/picam
+***************************************
+
 1) Adding an usb mic. https://www.quora.com/How-do-I-set-up-a-microphone-on-Raspberry-pi-And-how-to-get-an-input-from-it
 
 
