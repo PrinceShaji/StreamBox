@@ -10,6 +10,7 @@ import RPi.GPIO as GPIO
 from time import time, sleep, strftime, gmtime
 
 video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
+#video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy %s.mp4" %DateFilename
 
 DateFilename=strftime("%Y-%m-%d %H:%M", gmtime())
 
