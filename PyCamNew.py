@@ -14,7 +14,7 @@ video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
 DateFilename=strftime("%Y-%m-%d %H:%M", gmtime())
 
 def RecordVideo():
-	camera = picamera.PiCamera()
+    camera = picamera.PiCamera()
     camera.hflip = True
     camera.vflip = True
     camera.start_recording('video.h264')
