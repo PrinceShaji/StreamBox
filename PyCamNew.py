@@ -43,3 +43,15 @@ def DeleteTempFiles():
 	os.remove("video.h264")
 	os.remove("outputfile.mp4")
 
+
+def UploadFiles():
+	command = ([rclone copy /gdrive/ googledrive:gdrive/])
+	result = subprocess.Popen(command)
+	result.communicate()	
+
+	"""
+	command = ([RCLONE, 'move', '--log-file=rclone_upload.log', '--transfers', RCLONE_TRANSFERS, '--drive-chunk-size=16M', '--exclude', 'filepart', LOCAL_DIR + dir + '/', REMOTE_NAME  + REMOTE_DIR + dir + '/'])
+        result = subprocess.Popen(command)
+        result.communicate()
+        """
+	
