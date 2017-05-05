@@ -61,13 +61,32 @@ def UploadFiles():
 
 def LedStandby():
 	GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(40, GPIO.OUT)
+    GPIO.setup(pin, GPIO.OUT)
     for num in itertools.count(1): #creates an infinite loop
-        GPIO.output(40,1)
+        GPIO.output(pin,1)
         sleep(1)
-        GPIO.output(40,0)
+        GPIO.output(pin,0)
         sleep(1)
 
+
+def LedRecording():
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(pin, GPIO.OUT)
+    for unm in itertools.count(1):
+        GPIO.output(pin,1)
+        sleep()
+        GPIO.output(pin,0)
+        sleep(1)
+
+
+def LedUploading():
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(pin, GPIO.OUT)
+    for unm in itertools.count(1):
+        GPIO.output(pin,1)
+        sleep()
+        GPIO.output(pin,0)
+        sleep(1)
 
 
 
