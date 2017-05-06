@@ -9,6 +9,12 @@ software for recording video with audio
 ***************************************
 https://github.com/iizukanao/picam
 ***************************************
+https://learn.adafruit.com/usb-audio-cards-with-a-raspberry-pi/cm108-type
+http://electricgardener.net/installing-cm108-audio-controller-raspberry-pi
+
+
+Adding the 
+
 
 1) Adding an usb mic. https://www.quora.com/How-do-I-set-up-a-microphone-on-Raspberry-pi-And-how-to-get-an-input-from-it
 
@@ -16,15 +22,7 @@ https://github.com/iizukanao/picam
 2) Second one: https://raspberrypi.stackexchange.com/questions/43320/raspberry-pi-3-audio-input
 
 
-3) A project I found on kickstarter
-   > https://www.kickstarter.com/projects/1250664710/audio-injector-sound-card-for-the-raspberry-pi
-   > http://www.audioinjector.net/#!/rpi-hat
 
-
-4) Another alternative. This uses a cheap USB sound card and a software from GitHub.
-   >Link to the software: http://jasperproject.github.io/documentation/
-
-   Read the documentation and installation giude. (It's a lil complicated)
 
 
 
