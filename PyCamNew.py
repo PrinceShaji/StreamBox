@@ -2,7 +2,7 @@
 This is the final script.
 Don't edit master, create a pull request
 """
-
+#How to import picam video recorder?
 import picamera
 from subprocess import call
 import os
@@ -16,18 +16,21 @@ video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
 
 DateFilename=strftime("%Y-%m-%d %H:%M", gmtime())
 
+
+#Have to change this with the codes to record video using picam :)
 def RecordVideo():
 	camera = picamera.PiCamera()
-    camera.hflip = True
-    camera.vflip = True
-    camera.start_recording('video.h264')
+        camera.hflip = True
+        camera.vflip = True
+        camera.start_recording('video.h264')
 
     #Define StopRecording so that that can be done with another
     #button input
     #sleep(5)
     #camera.stop_recording()
 
-
+	
+#Have to change to stop video using picam.
 def StopRecording():
 	camera = picamera.PiCamera()
 	camera.stop_recording()
@@ -52,8 +55,8 @@ def UploadFiles():
 	result = subprocess.Popen(command)
 	result.communicate()	
 
-	"""
-	command = ([RCLONE, 'move', '--log-file=rclone_upload.log', '--transfers', RCLONE_TRANSFERS, '--drive-chunk-size=16M', '--exclude', 'filepart', LOCAL_DIR + dir + '/', REMOTE_NAME  + REMOTE_DIR + dir + '/'])
+    """
+    command = ([RCLONE, 'move', '--log-file=rclone_upload.log', '--transfers', RCLONE_TRANSFERS, '--drive-chunk-size=16M', '--exclude', 'filepart', LOCAL_DIR + dir + '/', REMOTE_NAME  + REMOTE_DIR + dir + '/'])
     result = subprocess.Popen(command)
     result.communicate()
     """
