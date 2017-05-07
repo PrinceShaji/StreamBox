@@ -14,6 +14,8 @@ http://electricgardener.net/installing-cm108-audio-controller-raspberry-pi
 
 recording audio  arecord -f S16_LE -Dplug:default -d 4500 test.wav
 
+recording audio  arecord -f S16_LE -Dplug:default -d 4500 test.wav
+
 Adding the
 
 
