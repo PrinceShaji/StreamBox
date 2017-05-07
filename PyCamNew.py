@@ -11,7 +11,7 @@ from time import time, sleep, strftime, gmtime
 from multiprocessing import Process
 import itertools
 
-video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4" 
+video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
 #video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy %s.mp4" %DateFilename
 
 DateFilename=strftime("%Y-%m-%d %H:%M", gmtime())
@@ -29,7 +29,7 @@ def RecordVideo():
     #sleep(5)
     #camera.stop_recording()
 
-	
+
 #Have to change to stop video using picam.
 def StopRecording():
 	camera = picamera.PiCamera()
@@ -53,7 +53,7 @@ def DeleteTempFiles():
 def UploadFiles():
 	command = ([rclone copy /gdrive/ googledrive:gdrive/])
 	result = subprocess.Popen(command)
-	result.communicate()	
+	result.communicate()
 
     """
     command = ([RCLONE, 'move', '--log-file=rclone_upload.log', '--transfers', RCLONE_TRANSFERS, '--drive-chunk-size=16M', '--exclude', 'filepart', LOCAL_DIR + dir + '/', REMOTE_NAME  + REMOTE_DIR + dir + '/'])
@@ -94,4 +94,4 @@ def LedUploading():
 
 
 
-if __name__ == "__main__":   #start of the program?        
+if __name__ == "__main__":   #start of the program?

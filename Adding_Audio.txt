@@ -1,6 +1,6 @@
 Adding audio is a tricky thing to do. You can do it via the cheap method (USB sound card) or the expensive method (cirrus logic audio card)
 
-Cirrus cards are really expensive. So the safer way would be buying a cheap USB sound card. 
+Cirrus cards are really expensive. So the safer way would be buying a cheap USB sound card.
 
 <<<Few Tutorials>>>
 
@@ -12,8 +12,9 @@ https://github.com/iizukanao/picam
 https://learn.adafruit.com/usb-audio-cards-with-a-raspberry-pi/cm108-type
 http://electricgardener.net/installing-cm108-audio-controller-raspberry-pi
 
+recording audio  arecord -f S16_LE -Dplug:default -d 4500 test.wav
 
-Adding the 
+Adding the
 
 
 1) Adding an usb mic. https://www.quora.com/How-do-I-set-up-a-microphone-on-Raspberry-pi-And-how-to-get-an-input-from-it
@@ -40,13 +41,10 @@ Adding the
 
    Tutorials : http://www.keywordsking.com/cmFzcGJlcnJ5IHBpIHdpdGggbWlj/
                http://www.hertaville.com/interfacing-an-spi-adc-mcp3008-chip-to-the-raspberry-pi-using-c.html
-               
+
                The chip only cost about INR 200, here is the link.
                http://in.element14.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174
-               
+
 8) Finally, upgrading the usb microphone (using a sound card)
    http://www.instructables.com/id/USB-Microphone/
    http://www.instructables.com/id/Coco-Mic-The-DIY-Studio-Quailty-USB-Mic-MEMS-techn/
-   
-   
-   
