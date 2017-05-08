@@ -26,7 +26,6 @@ def RecordVideo():
 
 #Have to change to stop video using picam.
 def StopRecording():
-    camera = picamera.PiCamera()
     camera.stop_recording()
 
 
