@@ -18,6 +18,10 @@ def RecordVideo():
         camera.vflip = True
         camera.start_recording('video.h264')
 
+def RecordAudio():
+    call ([alsa_rec], shell=True)
+    exit()
+
     #Define StopRecording so that that can be done with another
     #button input
     #sleep(5)
@@ -28,6 +32,9 @@ def RecordVideo():
 def StopRecording():
     camera.stop_recording()
 
+def StopAudio():
+    call ([alsa_stop], shell=True)
+    exit()
 
 def ConvertVideo():
     call ([VideoConvert], shell=True)
@@ -86,8 +93,8 @@ if __name__ == "__main__":   #start of the program?
 
 #Use code 89 in case 90 fails.
 #VideoConvert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
-VideoConvert = "ffmpeg -r 30 -i video.h264 -vcodec copy %s.mp4" %DateFilename
 DateFilename=strftime("%Y-%m-%d %H:%M", gmtime())
+VideoConvert = "ffmpeg -r 30 -i video.h264 -vcodec copy %s.mp4" %DateFilename
 camera = picamera.PiCamera()
 
 SLed = 5
@@ -100,12 +107,11 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(SLed, GPIO.OUT)
 GPIO.setup(RLed, GPIO.OUT)
 GPIO.setup(ULed, GPIO.OUT)
-GPIO.setup(Button1, GPIO.IN, pull_up_down=GPIO.PUD_UP) 
-GPIO.setup(Button2, GPIO.IN, pull_up_down=GPIO.PUD_UP) 
-# Button 1 and Button2 are set up as inputs, pulled up to avoid false detection.  
-# Both ports are wired to connect to GND on button press.  
-# So we'll be setting up falling edge detection for both  
-
+GPIO.setup(Button1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(Button2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+# Button 1 and Button2 are set up as inputs, pulled up to avoid false detection.
+# Both ports are wired to connect to GND on button press.
+# So we'll be setting up falling edge detection for both
 
 
 
@@ -118,6 +124,6 @@ GPIO.setup(Button2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
 #The last lines of codes.
-except KeyboardInterrupt:  
-    GPIO.cleanup()       # clean up GPIO on CTRL+C exit  
-GPIO.cleanup()           # clean up GPIO on normal exit  
+except KeyboardInterrupt:
+    GPIO.cleanup()       # clean up GPIO on CTRL+C exit
+GPIO.cleanup()           # clean up GPIO on normal exit
