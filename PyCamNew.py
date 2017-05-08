@@ -30,7 +30,7 @@ def StopRecording():
 
 
 def ConvertVideo():
-    call ([video_convert], shell=True)
+    call ([VideoConvert], shell=True)
     exit()
 
 
@@ -84,9 +84,9 @@ def LedUploading():
 if __name__ == "__main__":   #start of the program?
 
 
-video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
+#Try this first.
 #video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy %s.mp4" %DateFilename
-
+VideoConvert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
 DateFilename=strftime("%Y-%m-%d %H:%M", gmtime())
 camera = picamera.PiCamera()
 
