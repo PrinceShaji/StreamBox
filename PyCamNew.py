@@ -104,3 +104,9 @@ GPIO.setup(Button1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(Button2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
+
+
+
+
+#The last line of code
+GPIO.cleanup()
