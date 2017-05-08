@@ -84,9 +84,9 @@ def LedUploading():
 if __name__ == "__main__":   #start of the program?
 
 
-#Try this first.
-#video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy %s.mp4" %DateFilename
-VideoConvert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
+#Use code 89 in case 90 fails.
+#VideoConvert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
+VideoConvert = "ffmpeg -r 30 -i video.h264 -vcodec copy %s.mp4" %DateFilename
 DateFilename=strftime("%Y-%m-%d %H:%M", gmtime())
 camera = picamera.PiCamera()
 
@@ -105,6 +105,10 @@ GPIO.setup(Button2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 # Button 1 and Button2 are set up as inputs, pulled up to avoid false detection.  
 # Both ports are wired to connect to GND on button press.  
 # So we'll be setting up falling edge detection for both  
+
+
+
+
 
 
 
