@@ -100,9 +100,11 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(SLed, GPIO.OUT)
 GPIO.setup(RLed, GPIO.OUT)
 GPIO.setup(ULed, GPIO.OUT)
-GPIO.setup(Button1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(Button2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-
+GPIO.setup(Button1, GPIO.IN, pull_up_down=GPIO.PUD_UP) 
+GPIO.setup(Button2, GPIO.IN, pull_up_down=GPIO.PUD_UP) 
+# Button 1 and Button2 are set up as inputs, pulled up to avoid false detection.  
+# Both ports are wired to connect to GND on button press.  
+# So we'll be setting up falling edge detection for both  
 
 
 
