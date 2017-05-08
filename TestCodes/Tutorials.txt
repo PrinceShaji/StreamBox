@@ -6,6 +6,7 @@ http://raspi.tv/2013/how-to-use-interrupts-with-python-on-the-raspberry-pi-and-r
 
 https://bbs.archlinux.org/viewtopic.php?id=207553
 
+https://learnpythonthehardway.org/book/ex40.html
 
 
 
