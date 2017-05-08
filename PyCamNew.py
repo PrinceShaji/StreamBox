@@ -117,7 +117,10 @@ GPIO.setup(Button2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
 
-
+#Progrm starts here:
+while True:
+    if (GPIO.input(Button1)):
+        
 
 
 
