@@ -108,5 +108,10 @@ GPIO.setup(Button2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
 
-#The last line of code
-GPIO.cleanup()
+
+
+
+#The last lines of codes.
+except KeyboardInterrupt:  
+    GPIO.cleanup()       # clean up GPIO on CTRL+C exit  
+GPIO.cleanup()           # clean up GPIO on normal exit  
