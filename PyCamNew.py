@@ -87,21 +87,23 @@ def LedUploading():
 if __name__ == "__main__":   #start of the program?
 
 
-#Use code 89 in case 90 fails.
+#Use the following line of code if the other VideoConvert fails
 #VideoConvert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
 DateFilename=strftime("%Y-%m-%d %H.%M", gmtime())
 VideoConvert = "ffmpeg -r 30 -i video.h264 -vcodec copy %s.mp4" %DateFilename
 alsarec = "code to record audio"
 camera = picamera.PiCamera()
 
+#GPIO pins for LEDs
 SLed = 5
 RLed = 7
 ULed = 8
+#GPIO pins for buttons
 Button1 = 10
 Button2 = 12
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(SLed, GPIO.OUT)
+GPIO.setup(SLed, GPIO.OUT) #Sets the SLed pin to output mode for lighting LED
 GPIO.setup(RLed, GPIO.OUT)
 GPIO.setup(ULed, GPIO.OUT)
 GPIO.setup(Button1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
