@@ -9,7 +9,7 @@ https://bbs.archlinux.org/viewtopic.php?id=207553
 https://learnpythonthehardway.org/book/ex40.html
 
 
-
+http://sirlagz.net/2013/03/10/quickie-streaming-audio-and-video-from-a-webcam-on-the-raspberry-pi/
 
 
 
