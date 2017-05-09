@@ -1,8 +1,3 @@
-""""
-This is the final script.
-Don't edit master, create a pull request
-"""
-#How to import picam video recorder?
 import picamera
 from subprocess import call
 import os
@@ -11,55 +6,58 @@ from time import time, sleep, strftime, gmtime
 from multiprocessing import Process
 import itertools
 
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(SLed, GPIO.OUT)
+GPIO.setup(RLed, GPIO.OUT)
+GPIO.setup(ULed, GPIO.OUT)
+GPIO.setup(Button1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(Button2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-#Have to change this with the codes to record video using picam :)
-def RecordVideo():
-        camera.hflip = True
-        camera.vflip = True
-        camera.start_recording('video.h264')
+SLed = 5
+RLed = 7
+ULed = 8
+Button1 = 10
+Button2 = 12
 
-def RecordAudio():
-    call ([alsa_rec], shell=True)
-    exit()
-
-    #Define StopRecording so that that can be done with another
-    #button input
-    #sleep(5)
-    #camera.stop_recording()
-
-
-#Have to change to stop video using picam.
-def StopRecording():
-    camera.stop_recording()
-
-def StopAudio():
-    call ([alsa_stop], shell=True)
-    exit()
-
-def ConvertVideo():
-    call ([VideoConvert], shell=True)
-    exit()
+video_convert = "ffmpeg -r 30 -i video.h264 -vcodec copy gdrive/outputfile.mp4"
 
 
-def RenameFile():
-    os.renames("outputfile.mp4" "gdrive/%s.mp4" %DateFilename)
+LedStandby()
+while True:
+    if (GPIO.input(Button1)):
+    GPIO.cleanup()
+    if __name__ == "__main__":
+    p1 = Process(target=LedRecording)
+    p1.start()
+    p2 = Process(target=RecordVideo)
+    p2.start()
+    if (GPIO.input(Button2)): == True
+      GPIO.cleanup()
+      LedUploading()
+      camera = picamera.PiCamera()
+camera.hflip = True
+camera.vflip = True
+camera.start_recording('video.h264')
+sleep(5)
+camera.stop_recording()
+os.system('clear')
+print('Recording...... \nStopping recording')
 
+sleep(1)
 
-def DeleteTempFiles():
-    os.remove("video.h264")
-    os.remove("outputfile.mp4")
-
-
-def UploadFiles():
-    command = ([rclone copy /gdrive/ googledrive:gdrive/])
-    result = subprocess.Popen(command)
-    result.communicate()
-
-    """
-    command = ([RCLONE, 'move', '--log-file=rclone_upload.log', '--transfers', RCLONE_TRANSFERS, '--drive-chunk-size=16M', '--exclude', 'filepart', LOCAL_DIR + dir + '/', REMOTE_NAME  + REMOTE_DIR + dir + '/'])
-    result = subprocess.Popen(command)
-    result.communicate()
-    """
+#Converting the raw h.264 to mp4
+call ([video_convert], shell=True)
+os.system('clear')
+print('Recording..............[y] \nStopping recording.....[y] \nConverting File........[y]')
+print('Deleting temp files....[y]')
+os.system('rm video.h264')
+os.system('rm /gdrive/outputfile.mp4')
+print('Uploading')
+#Uploading files to google drive using rclone
+os.system('rclone copy /home/pi/pythoncam/gdrive googledrive:gdrive')
+os.system('clear')
+print('Recording..............[y] \nStopping recording.....[y] \nConverting.............[y] \nDeleting temp files....[y] \nUploading..............[y]')
+print('\nCompleted')
 
 
 def LedStandby():
@@ -84,49 +82,3 @@ def LedUploading():
             sleep()
             GPIO.output(ULed, 0)
             sleep(1)
-
-
-
-
-if __name__ == "__main__":   #start of the program?
-
-
-#Use code 89 in case 90 fails.
-#VideoConvert = "ffmpeg -r 30 -i video.h264 -vcodec copy outputfile.mp4"
-DateFilename=strftime("%Y-%m-%d %H:%M", gmtime())
-VideoConvert = "ffmpeg -r 30 -i video.h264 -vcodec copy %s.mp4" %DateFilename
-camera = picamera.PiCamera()
-
-SLed = 5
-RLed = 7
-ULed = 8
-Button1 = 10
-Button2 = 12
-
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(SLed, GPIO.OUT)
-GPIO.setup(RLed, GPIO.OUT)
-GPIO.setup(ULed, GPIO.OUT)
-GPIO.setup(Button1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(Button2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-# Button 1 and Button2 are set up as inputs, pulled up to avoid false detection.
-# Both ports are wired to connect to GND on button press.
-# So we'll be setting up falling edge detection for both
-
-
-
-
-
-#Progrm starts here:
-while True:
-    if (GPIO.input(Button1)):
-        
-
-
-
-
-
-#The last lines of codes.
-except KeyboardInterrupt:
-    GPIO.cleanup()       # clean up GPIO on CTRL+C exit
-GPIO.cleanup()           # clean up GPIO on normal exit
