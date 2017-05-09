@@ -59,15 +59,15 @@ def UploadFiles():
 
 
 def LedStandby():
-        for num in itertools.count(1): #creates an infinite loop
+        for num in itertools.count(): #creates an infinite loop
             GPIO.output(SLed, 1)
             sleep(1)
             GPIO.output(SLed, 0)
             sleep(1)
-
+        
 
 def LedRecording():
-        for unm in itertools.count(1):
+        for unm in itertools.count():
             GPIO.output(RLed, 1)
             sleep()
             GPIO.output(RLed, 0)
@@ -75,7 +75,7 @@ def LedRecording():
 
 
 def LedUploading():
-        for unm in itertools.count(1):
+        for unm in itertools.count():
             GPIO.output(ULed, 1)
             sleep()
             GPIO.output(ULed, 0)
